@@ -145,7 +145,7 @@ pre {
   color: var(--text-color);
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  padding: 2.8em 1em 1em; /* Increased top padding from 2.2em to 2.8em */
+  padding: 3.2em 1em 1em; /* Increased top padding from 2.8em to 3.2em */
   overflow-x: auto;
   position: relative;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -154,8 +154,8 @@ pre {
 pre::before {
   content: "";
   position: absolute;
-  top: 12px; /* Increased from 8px to 12px */
-  left: 12px; /* Increased from 8px to 12px */
+  top: 16px; /* Increased from 12px to 16px */
+  left: 12px;
   width: 12px;
   height: 12px;
   border-radius: 50%;
