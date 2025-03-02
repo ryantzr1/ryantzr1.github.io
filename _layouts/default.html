@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+<body>
+  <header>
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <nav>
+      {% for page in site.header_pages %}
+        {% assign p = site.pages | where: "path", page | first %}
+        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+      {% endfor %}
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>
+    <p>
+      © {{ site.time | date: '%Y' }} {{ site.author }} |
+      <a href="{{ site.social_links[0].user_url }}">GitHub</a> |
+      <a href="{{ site.social_links[1].user_url }}">Twitter</a>
+    </p>
+  </footer>
+</body>
+</html>

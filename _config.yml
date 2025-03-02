@@ -1,38 +1,50 @@
-title: Ryan's Blog
-author: Ryan Tan
-description: A simple and cozy blog about my thoughts and projects.
+title: "Ryan's Blog"
+author: "Ryan Tan"
+description: "A bold, dark blog diving into my tech experiments and projects."
 baseurl: ""
-url: "https://ryantzr1.github.io" 
+url: "https://ryantzr1.github.io"
 
-# Theme
-theme: minima
-
-# Minima theme customizations
-minima:
-  skin: classic
-  date_format: "%b %-d, %Y"
+# Theme - Switching from Minima to Midnight
+# remote_theme: pages-themes/midnight@v0.2.0
 
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
-# Header links (appear in the top navigation)
+# Header links (top navigation)
 header_pages:
-  - about.md # Creates an "About" page link
-  - posts.md # Optional, links to a custom posts page
+  - about.md
+  - posts.md
+  - _categories/backend.md
+  - _categories/frontend.md
+  - _categories/llm-safety-and-evals.md
 
-# Social links (appear in the footer)
+# Social links (footer or sidebar, depending on customization)
 social_links:
-  - { platform: github,  user_url: "https://github.com/ryantzr1"}
-  - { platform: twitter, user_url: "https://twitter.com/ryan_tzr"}
+  - { platform: github, user_url: "https://github.com/ryantzr1" }
+  - { platform: twitter, user_url: "https://twitter.com/ryan_tzr" }
 
-# Plugins (pre-installed for GitHub Pages)
+# Plugins
 plugins:
-  - jekyll-feed # Adds an RSS feed
-  - jekyll-seo-tag # Improves SEO
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-remote-theme  # Required for remote_theme
+
+# Pagination settings
+paginate: 5
+paginate_path: "/page:num/"
 
 # Exclude unnecessary files
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+
+# Collections for categories
+collections:
+  categories:
+    output: true
+
+# Custom CSS for extra flair
+custom_css: "/assets/css/custom.css"

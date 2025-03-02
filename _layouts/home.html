@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<h2>Recent Posts</h2>
+<ul class="post-list">
+  {% for post in site.posts limit:5 %}
+    <li>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <span>{{ post.date | date: "%B %d, %Y" }}</span>
+      <p>{{ post.description | default: post.excerpt }}</p>
+    </li>
+  {% endfor %}
+</ul>
+
+<p><a href="/posts/">See all posts</a></p>
