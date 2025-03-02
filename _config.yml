@@ -1,0 +1,38 @@
+title: Ryan's Blog
+author: Ryan Tan
+description: A simple and cozy blog about my thoughts and projects.
+baseurl: ""
+url: "https://ryantzr1.github.io" 
+
+# Theme
+theme: minima
+
+# Minima theme customizations
+minima:
+  skin: classic
+  date_format: "%b %-d, %Y"
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Header links (appear in the top navigation)
+header_pages:
+  - about.md # Creates an "About" page link
+  - posts.md # Optional, links to a custom posts page
+
+# Social links (appear in the footer)
+social_links:
+  - { platform: github,  user_url: "https://github.com/ryantzr1"}
+  - { platform: twitter, user_url: "https://twitter.com/ryan_tzr"}
+
+# Plugins (pre-installed for GitHub Pages)
+plugins:
+  - jekyll-feed # Adds an RSS feed
+  - jekyll-seo-tag # Improves SEO
+
+# Exclude unnecessary files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
