@@ -9,10 +9,6 @@ repo: https://github.com/webpack/webpack
 website: https://webpack.js.org/concepts/module-federation
 ---
 
-# Module Federation: Streamlining Code Sharing in Web Development
-
-**March 18, 2025**
-
 Sometimes, the best way to manage shared code across applications isn’t through duplication or complex microservices—it’s by letting applications dynamically borrow what they need. Let’s explore how **Module Federation** tackles this elegantly.
 
 ---
@@ -46,8 +42,6 @@ Applications act as **hosts** (consumers) or **remotes** (providers), sharing co
 
 - A **remote** app exposes a shared `Button` component.
 - A **host** app imports `Button` from the remote, avoiding duplication.
-
-**Real-World Impact**: A developer team [reported](https://reddit.com/module-federation-experiences) that Module Federation reduced deployment time by 40%, as shared code updates propagate instantly across apps.
 
 ---
 
@@ -139,8 +133,6 @@ const App = () => (
 
 ---
 
-## Conclusion
-
 Module Federation is a game-changer for teams building scalable, maintainable web apps. It’s ideal for:
 
 - **Microfrontends**: Independent teams owning app parts.
@@ -151,8 +143,8 @@ While smaller projects might find the setup cumbersome, the long-term benefits f
 
 ---
 
-**Key Citations**
+**Further Readings**
 
-- [Module Federation Official Documentation](https://webpack.js.org/concepts/module-federation)
-- [Real-World Experiences (Reddit)](https://reddit.com/module-federation-experiences)
+- [Module Federation Official Documentation](https://module-federation.io/guide/start/index.html)
+- [Real-World Experiences](https://github.com/module-federation/module-federation-examples)
 - [Rspack: A Rust-Powered Web Bundler](https://rspack.dev)
