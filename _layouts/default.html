@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/custom.css">
-</head>
-<body>
-  <header>
-    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
-    <nav>
-      {% for page in site.header_pages %}
-        {% assign p = site.pages | where: "path", page | first %}
-        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
-      {% endfor %}
-    </nav>
-  </header>
-  <main>
-    {{ content }}
-  </main>
-  <footer>
-    <p>
-      © {{ site.time | date: '%Y' }} {{ site.author }} |
-      <a href="{{ site.social_links[0].user_url }}">GitHub</a> |
-      <a href="{{ site.social_links[1].user_url }}">Twitter</a>
-    </p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/custom.css" />
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+      <nav>
+        {% for page_path in site.header_pages %}
+        <!-- Try to find the page in site.pages (regular pages) -->
+        {% assign page = site.pages | where: "path", page_path | first %} {% if
+        page %}
+        <a href="{{ page.url | relative_url }}"
+          >{{ page.title | default: page.name }}</a
+        >
+        {% else %}
+        <!-- If not found, try to find it in site.categories (collection items) -->
+        {% assign collection_page = site.categories | where: "path", page_path |
+        first %} {% if collection_page %}
+        <a href="{{ collection_page.url | relative_url }}"
+          >{{ collection_page.title | default: collection_page.name }}</a
+        >
+        {% endif %} {% endif %} {% endfor %}
+      </nav>
+    </header>
+    <main>{{ content }}</main>
+    <footer>
+      <p>
+        © {{ site.time | date: '%Y' }} {{ site.author }} |
+        <a href="{{ site.social_links[0].user_url }}">GitHub</a> |
+        <a href="{{ site.social_links[1].user_url }}">Twitter</a>
+      </p>
+    </footer>
+  </body>
 </html>
