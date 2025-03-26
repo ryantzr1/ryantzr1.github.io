@@ -29,7 +29,7 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-remote-theme  # Required for remote_theme
+  - jekyll-remote-theme # Required for remote_theme
 
 # Pagination settings
 paginate: 5
