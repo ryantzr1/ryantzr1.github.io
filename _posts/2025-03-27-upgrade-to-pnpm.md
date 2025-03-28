@@ -127,6 +127,22 @@ of dependencies
 - **Symlinks**: pnpm uses symlinks to reference the global store; npm has no linking mechanism
 - **Disk Usage**: pnpm significantly reduces storage requirements, especially in monorepos
 
+## Visual Comparison: npm vs. pnpm Architecture
+
+<div class="side-by-side-comparison">
+  <div class="comparison-item">
+    <h3>npm Architecture</h3>
+    <img src="/assets/images/npm-diagram.png" alt="npm package architecture" class="diagram-image">
+    <p class="diagram-caption">Each project maintains complete copies of all dependencies</p>
+  </div>
+  
+  <div class="comparison-item">
+    <h3>pnpm Architecture</h3>
+    <img src="/assets/images/pnpm-diagram.png" alt="pnpm package architecture" class="diagram-image">
+    <p class="diagram-caption">Single global store with symlinks to project dependencies</p>
+  </div>
+</div>
+
 ## 5. Additional Features
 
 - **Lockfile Integrity**: `pnpm-lock.yaml` provides explicit dependency resolution, reducing inconsistencies compared to `package-lock.json`.
