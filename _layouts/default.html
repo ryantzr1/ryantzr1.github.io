@@ -26,6 +26,9 @@
     />
     <link rel="manifest" href="/assets/images/site.webmanifest" />
     <link rel="shortcut icon" href="/favicon.ico" />
+
+    {% if jekyll.environment == 'production' %} {% include google-analytics.html
+    %} {% endif %}
   </head>
   <body>
     <header>
