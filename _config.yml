@@ -11,13 +11,10 @@ url: "https://ryantzr1.github.io"
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 
-# Header links (top navigation)
+# Header links (top navigation) - Simplified navigation
 header_pages:
   - about.md
   - posts.md
-  - _categories/backend.md
-  - _categories/frontend.md
-  - _categories/llm-safety-and-evals.md
 
 # Social links (footer or sidebar, depending on customization)
 social_links:
@@ -40,6 +37,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - vendor/
 
 # Collections for categories
 collections:
