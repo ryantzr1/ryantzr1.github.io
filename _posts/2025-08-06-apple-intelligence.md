@@ -20,7 +20,9 @@ Let's apply this framework to Apple Intelligence.
 
 Using Brian Chesky's framework, let's design the extreme Apple Intelligence experience and work backwards to what's actually feasible:
 
-![11-Star Apple Intelligence Framework](/assets/images/apple-intelligence-framework.png)
+<p align="center">
+  <img src="/assets/images/apple-intelligence-framework.png" alt="11-Star Apple Intelligence Framework">
+</p>
 
 ### Level 1: "Refund Me" - No Response
 
