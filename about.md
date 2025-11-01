@@ -92,12 +92,20 @@ permalink: /about/
     <div class="posts-list">
       <div class="post-item">
         <div class="post-title-section">
+          <h3>AI Agent Engineer • Manus AI</h3>
+          <div style="color: #718096; font-size: 0.95em;">Building the best general AI Agents.</div>
+        </div>
+        <div class="post-date">Aug 2025 – Present</div>
+      </div>
+
+      <div class="post-item">
+        <div class="post-title-section">
           <h3>Software Engineer (Intern) • TikTok</h3>
           <div style="color: #718096; font-size: 0.95em;">Built AI-driven automation tools, debugging tools, and shared component libraries that optimized data analysis workflows across global moderation teams.</div>
         </div>
-        <div class="post-date">Jan 2025 – Present</div>
+        <div class="post-date">Jan 2025 – Aug 2025</div>
       </div>
-      
+
       <div class="post-item">
         <div class="post-title-section">
           <h3>Software Engineer (Intern) • HeyCharge</h3>
@@ -105,7 +113,7 @@ permalink: /about/
         </div>
         <div class="post-date">Jul 2024 – Dec 2024</div>
       </div>
-      
+
       <div class="post-item">
         <div class="post-title-section">
           <h3>Co-founder • FRIDAY Technologies</h3>
@@ -114,5 +122,6 @@ permalink: /about/
         <div class="post-date">Jan 2023 – Jul 2023</div>
       </div>
     </div>
+
   </section>
 </div>
